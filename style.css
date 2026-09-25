@@ -373,3 +373,20 @@ footer p {
         flex: 1 1 auto;
     }
 }
+
+
+.imagen-articulo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+.imagen-articulo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 6px;
+}

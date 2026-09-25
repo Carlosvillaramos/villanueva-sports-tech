@@ -1,0 +1,375 @@
+:root {
+    --bg: #0F1419;
+    --bg-elevado: #1A2332;
+    --borde: #2A3644;
+    --texto: #E8EDF2;
+    --texto-secundario: #8B98A5;
+    --acento: #00D9A3;
+    --acento-oscuro: #00B389;
+    --naranja: #FF6B35;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: var(--texto);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: var(--acento);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: var(--texto-secundario);
+}
+
+.title-center {
+    text-align: center;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    background-color: var(--bg-elevado);
+    border-bottom: 4px solid var(--acento);
+    width: 100%;
+}
+
+.navbar-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--texto);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    gap: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: bold;
+    padding: 5px 12px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: var(--acento);
+}
+
+.menu a.active {
+    color: var(--naranja);
+    border-bottom: 2px solid var(--naranja);
+}
+
+/* ========== HERO ========== */
+.hero {
+    background: linear-gradient(180deg, var(--bg-elevado), var(--bg));
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.text-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: var(--texto-secundario);
+    font-size: 1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========== BLOG GRID / CARDS ========== */
+.blog-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-card {
+    background: var(--bg-elevado);
+    border-left: 5px solid var(--acento);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 217, 163, 0.15);
+    transform: translateY(-2px);
+}
+
+.blog-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.btn-leer {
+    display: inline-block;
+    color: var(--naranja);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-leer:hover {
+    color: var(--acento);
+}
+
+/* ========== ARTICLE-STYLE CARDS (league pages) ========== */
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.autor-foto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--acento);
+}
+
+.autor-nombre {
+    font-weight: bold;
+    color: var(--texto);
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.autor-fecha {
+    font-size: 0.8em;
+    color: var(--texto-secundario);
+    margin: 0;
+}
+
+.imagen-articulo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+.fuente-articulo {
+    font-size: 0.8em;
+    color: var(--texto-secundario);
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* ========== READ IN SPANISH / CONTACT ========== */
+.social-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.link-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 6px;
+    background-color: var(--bg-elevado);
+    border: 1px solid var(--borde);
+    color: var(--texto);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.link-social:hover {
+    border-color: var(--acento);
+    color: var(--acento);
+    transform: translateY(-2px);
+}
+
+/* ========== ABOUT ========== */
+#about {
+    background-color: var(--bg-elevado);
+}
+
+.quienes-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+.quienes-foto {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--acento);
+    box-shadow: 0 0 20px rgba(0, 217, 163, 0.25);
+}
+
+.quienes-texto p {
+    margin-bottom: 15px;
+}
+
+/* ========== PRIVACY ========== */
+.privacy-content {
+    background: var(--bg-elevado);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.privacy-content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.privacy-content h3:first-child {
+    margin-top: 0;
+}
+
+.privacy-update {
+    margin-top: 25px;
+    font-size: 0.85em;
+    color: var(--texto-secundario);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: var(--bg-elevado);
+    border-top: 4px solid var(--acento);
+    text-align: center;
+}
+
+footer p {
+    color: var(--texto-secundario);
+    font-size: 0.85em;
+    letter-spacing: 1px;
+    padding: 20px;
+}
+
+/* ========== ADS ========== */
+.anuncio-wrapper {
+    margin: 30px auto;
+    text-align: center;
+    max-width: 900px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 720px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .navbar-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .hero h1 {
+        font-size: 3.2em;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #explore .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quienes-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .quienes-foto {
+        min-width: 160px;
+    }
+
+    .social-grid {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .link-social {
+        flex: 1 1 auto;
+    }
+}

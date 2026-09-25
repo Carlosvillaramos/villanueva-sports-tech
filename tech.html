@@ -32,18 +32,48 @@
 
     <div class="blog-grid">
 
+        <article class="blog-card">
+        <div class="autor">
+            <img src="Carlos-Developer-Yankees.png" alt="Carlos Villanueva" class="autor-foto">
+            <div>
+                <p class="autor-nombre">Carlos José Villanueva Ramos</p>
+                <p class="autor-fecha">📅 September 25, 2026</p>
+            </div>
+        </div>
+        <h3>🛠️ Build your way: Use any AI coding agent you prefer in Android Studio</h3>
+        <img src="Android-CLI-1.0-1024x683.webp" alt="Android-CLI-1.0-1024x683" class="imagen-articulo">
+        <p>AI engineering tools have become essential productivity multipliers, but every developer and team has their preferred coding assistant. Recognizing this, Android Studio is taking a massive leap forward by introducing "Bring Your Own Agent" (BYOA).</p> 
+        <p>With this new feature, you can seamlessly integrate your favorite coding agent — such as Anthropic's Claude Agent, OpenAI's Codex, or Google Antigravity — directly into Android Studio, supercharging it with the IDE's optimized AI infrastructure.</p>
+        <p><strong>Your agents, your AI plan</strong></p>
+        <p>BYOA combines your preferred agent with native IDE intelligence via the Agent Client Protocol (ACP). This unlocks critical engineering advantages:</p>
+        <p><strong>Source code awareness and token efficiency:</strong> Android Studio provides the complete project graph, build configurations, and platform details directly to your agent so it filters only what is relevant, reducing latency and token costs.</p> 
+        <p><strong>Native tool injection:</strong> We connect build diagnostics, Jetpack Compose previews, Android SDK tools, and emulator controls straight to your agent so it can test, diagnose, and execute right inside the environment.</p>
+        <p><strong>Seamless flexibility:</strong> Connect any ACP-compatible agent, log in with your consumer or enterprise plan, and swap agents effortlessly if one runs out of quota or performance expectations.</p>
+        <p>For developers in the Google ecosystem, the recommended "Google Antigravity" agent provides access to top-tier models like Gemini Flash alongside expanded usage quotas using standard Google accounts or AI Pro/Ultra plans.</p>
+        <p><strong>My take:</strong> this openness proves that AI-assisted mobile development has fully matured. Instead of locking developers into a single proprietary IDE assistant, the future belongs to open architectures where you choose the brain and let the native environment handle the heavy lifting.</p>
+        <p><strong><em>Source: Matthew Warner, Product Manager, Android Developer Experience</em></strong></p>
+    </article>
+
       <article class="blog-card">
         <div class="autor">
           <img src="Carlos-Developer-Yankees.png" alt="Carlos Villanueva" class="autor-foto">
           <div>
             <p class="autor-nombre">Carlos José Villanueva Ramos</p>
-            <p class="autor-fecha">📅 Coming soon</p>
+            <p class="autor-fecha">📅 25 September 2026</p>
           </div>
         </div>
-        <h3>Your first technology article goes here</h3>
-        <p>Replace this placeholder with your own technology news, written in English for this site.</p>
-        <p class="fuente-articulo">Source: your source here</p>
+        <h3>🤖 Stop paying the build_runner tax: Why I refuse to use Mockito in modern Dart</h3>
+        <img src="flutter-for-developer.png" alt="Flutter for developer" class="imagen-articulo">
+        <p>Anyone who has practiced test-driven development (TDD) in Flutter knows the familiar friction: you add a new method to a service interface, head back to your test file, and see red squiggly lines everywhere because the generated mock doesn't recognize it yet.</p>
+        <p>You sigh, open your terminal, and run the dreaded command: <code>dart run build_runner build --delete-conflicting-outputs</code>. Then you wait fifteen seconds, thirty seconds, or even two minutes in a large enterprise codebase, completely derailing your train of thought.</p>
+        <p>This happens because null safety forced classic Mockito to abandon runtime reflection and shift to compile-time code generation, introducing three major bottlenecks: the iteration tax that destroys TDD flow, Git diff contamination with thousands of lines of boilerplate code, and fragile annotation coupling.</p>
+        <p><strong>Enter Mocktail: Runtime mocking without configuration</strong></p>
+        <p>Created by Felix Angelov, Mocktail provides the exact same intuitive API as Mockito but with zero code generation, zero .mocks.dart files, and zero annotations. By leveraging Dart's implicit interfaces and wrapping invocations in closures like <code>() => mock.getUser()</code>, it safely defers execution.</p>
+        <p>The only minor trade-off is registering fallback values for custom non-nullable types using <code>registerFallbackValue</code> in your setup, which takes literally two lines of code.</p>
+        <p><strong>My take:</strong> what I love about this shift is how it gives TDD its velocity back. Waiting on build_runner just to verify a simple method call is a waste of mental energy. Migrating gradually to Mocktail removes a historical bottleneck that should have stayed in 2020.</p>
+        <p><strong><em>Source: Randal L. Schwartz for Google Developer Experts</em></strong></p>
       </article>
+
 
     </div>
   </main>

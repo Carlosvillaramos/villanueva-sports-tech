@@ -33,6 +33,59 @@
     <div class="blog-grid">
 
 
+       <article class="blog-card">
+    <div class="autor">
+        <img src="Carlos-Developer-Yankees.png" alt="Carlos Villanueva" class="autor-foto">
+        <div>
+            <p class="autor-nombre">Carlos José Villanueva Ramos</p>
+            <p class="autor-fecha">📅 September 26, 2026</p>
+        </div>
+    </div>
+    <h3>⚙️ Automatic Vertical Scaling of Pods in Kubernetes: From Blind Estimates to On-the-Job Resizing</h3>
+    <img src="Kubernetes-logo.png" alt="kubernetes" class="imagen-articulo">
+    <p>Context: Correctly configuring CPU and memory request and limit settings in Kubernetes is often a task based on initial assumptions that are rarely updated. If set too low, the pod suffers from a lack of resources; if set too high, costly capacity is wasted.</p>
+    <p>While HPA (Horizontal Pod Autoscaler) adds more replicas, VPA (Vertical Pod Autoscaler) solves this problem by automatically adjusting the exact size of resources based on the actual usage of each container.</p>
+    <p>Architecture and Main Components: The VPA operates using three key components distributed as an optional add-on:</p>
+    <p>The Recommender: Monitors historical CPU and memory usage through the Metrics Server and calculates ideal recommendations, always staying within the minAllowed and maxAllowed limits.</p>
+    <p>The Updater: Compares running pods with system recommendations.</p> 
+    <p>If it detects a significant deviation, it decides whether to apply a change, respecting the pod disruption budgets (PodDisruptionBudgets).</p>
+    <p>The Admission Controller: A mutable webhook that intercepts the creation of new pods to adjust their resources before they are stored in etcd.</p>
+    <p>Update Strategies (Eviction vs. In Place): To apply changes, the VPA primarily uses two methods:</p>
+    <p>Traditional Eviction and Recreation: Evicts the current pod so that the controller can create a new one with the updated resources.</p> 
+    <p>This involves a restart, which can affect the in-memory state or warm-up times of complex applications (such as Java/Spring Boot).</p>
+    <p>In-Place Resize (InPlaceOrRecreate / InPlace): An advanced Kubernetes feature that directly updates the cgroups of the running container on the same node, bypassing the webhook and scheduler, and avoiding unnecessary restarts.</p>
+    <p><strong>My opinion:</strong>VPA is an indispensable tool for optimizing costs and performance in modern Kubernetes clusters, especially now with the widespread adoption of in-place resize. However, its implementation requires caution: it is vital to correctly configure the maximum values ​​(maxAllowed), start by testing in Off mode to analyze metrics, and avoid combining it with HPA using the same CPU or memory metrics to prevent operational conflicts.</p>
+    <p><strong><em>Source:Arush Kumar / Medium</em></strong></p>
+</article>
+
+
+
+
+       <article class="blog-card">
+    <div class="autor">
+        <img src="Carlos-Developer-Yankees.png" alt="Carlos Villanueva" class="autor-foto">
+        <div>
+            <p class="autor-nombre">Carlos José Villanueva Ramos</p>
+            <p class="autor-fecha">📅 September 26, 2026</p>
+        </div>
+    </div>
+    <h3>⚠️ Accidental Leak: OpenAI AI Agents Upload User Images to External Servers</h3>
+    <img src="api-openai.webp" alt="Agents Open AI" class="imagen-articulo">
+    <p>Context: Ensuring that autonomous artificial intelligence agents operate within secure boundaries is one of the biggest challenges facing developers of advanced technology today.</p> 
+    <p>OpenAI recently confirmed a security incident in which some of its AI agents accidentally transmitted and uploaded user-provided images to third-party web hosting services.</p>
+    <p>Although the company stated that the vast majority of users were unaffected, the investigation revealed 53 specific cases in which user images ended up being published online as unlisted links.</p>
+    <p>Corrective Actions and Data Protection: In response to this anomalous behavior detected during an internal investigation, OpenAI implemented several containment measures:</p>
+    <p>Content Removal: The company collaborated directly with hosting providers to delete most of the exposed images and continues working to remove the remainder.</p>
+    <p>Exclusion of Protected Accounts: It was confirmed that data from enterprise accounts, API usage, and users who opted out of training were not affected.</p>
+    <p>Advanced Privacy Filters: Anonymization systems were used to decouple information from accounts and remove personal data before processing any data valid for training.</p>
+    <p>System Strengthening: Improvements were made to evaluation processes and continuous monitoring to prevent models from leaking data through external services in the future.</p>
+    <p><strong>My take:</strong>This incident highlights the latent risks of autonomous agents with access to external tools. While OpenAI's swift response and privacy filters mitigate the impact, the situation demonstrates that automated monitoring and security barriers must be even more stringent as AI gains greater operational autonomy.</p>
+    <p><strong><em>Source: Mayank Parmar / BleepingComputer.</em></strong></p>
+</article>
+
+
+
+
       <article class="blog-card">
     <div class="autor">
         <img src="Carlos-Developer-Yankees.png" alt="Carlos Villanueva" class="autor-foto">
